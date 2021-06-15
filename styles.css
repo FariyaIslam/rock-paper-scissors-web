@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#game__board {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(129.03deg, #130d58 -6.35%, #343cc6 136.81%);
+}

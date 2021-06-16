@@ -11,13 +11,13 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 .container {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 }
 
 .box {
-  width: 451px;
-  height: 257px;
+  width: 400px;
+  height: 250px;
   /* background-color: salmon; */
   background-color: #118a62;
   border-radius: 30px;
@@ -30,10 +30,16 @@ body {
 }
 
 .box__button {
-  height: 70px;
-  width: 70px;
+  height: 80px;
+  width: 80px;
   border-radius: 20px;
   background-color: salmon;
+  margin: 0 .8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
 }
 
 
@@ -41,7 +47,15 @@ body {
   text-align: center;
   color: #E4E4E4;
   padding: 1rem 0;
-  
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.box h3 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+  color: greenyellow;
+  text-transform: uppercase;
 }
 #game__board {
   height: 100vh;
@@ -54,7 +68,8 @@ body {
   font-size: 36px;
   color: #E4E4E4;
   text-align: center;
-  padding: 1rem 0;
+  padding: 2rem 0;
+
 }
 
 /* winner__count */
@@ -70,8 +85,79 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 5rem;
   }
 
   .icons__button {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  /* winner__card */
+  .winner__card {
+    padding: .5rem;
+    border-radius: 10px;
+    background-color: rgba(11, 131, 11, 0.808);
+  }
+  .winner__card p{
+    color: white
+  }
+
+
+  /* Responsive Media Queries */
+
+  @media screen and (max-width: 1024px) {
+    body {
+      font-size: 14px;
+    }
+
+    .box {
+      width: 320px;
+      margin-left:  1rem;
+      margin-right:  1rem;
+    }
+    .box__button  {
+      width: 70px;
+      height: 70px;
+      padding: .4rem;
+    }
+  }
+  @media only screen and (max-width: 767.98px) {
+   body {
+     font-size: 12px;
+   }
+    .box {
+      width: 350px;
+      height: 220px;
+    }
+
+    .game__info {
+      flex-direction: column;
+      margin-top: 0;
+      /* justify-content: space-between;
+      align-items: center;
+      margin-top: 5rem; */
+    }
+    #game__board {
+      height: auto;
+      padding-bottom: 1rem;
+    }
+  }
+
+  @media only screen and (max-width: 424px) {
+    body {
+      font-size: 8px;
+    }
+
+      .box {
+      width: 300px;
+      height: 220px;
+    }
+    .box__button {
+      height: 65px;
+      width: 65px;
+      padding: .3rem;
+    }
   }
